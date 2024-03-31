@@ -34,7 +34,6 @@ public class SongComponentTest {
         when(songRepository.findById(anyString())).thenReturn(Optional.empty());
 
         // then-when
-        // assertThrows(NotFoundPlaylistEntityException.class,()->playlistComponent.getPlaylist("test"));
         assertThrows(NotFoundSongEntityException.class,()->songComponent.getSongEntityById("test"));
     }
 }
